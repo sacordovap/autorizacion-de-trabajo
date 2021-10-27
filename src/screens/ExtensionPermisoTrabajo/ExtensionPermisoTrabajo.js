@@ -25,16 +25,7 @@ function ExtensionPermisoTrabajo(props) {
           defaultValue=""
           style={styles.ingresoSupervisor}
         ></TextInput>
-        <Text style={styles.nCelular}>N° Celular</Text>
-        <TextInput
-          placeholder="Ingrese celular del supervisor"
-          maxLength={140}
-          multiline={false}
-          spellCheck={true}
-          textBreakStrategy="simple"
-          dataDetector="phoneNumber"
-          style={styles.ingresoCelular}
-        ></TextInput>
+       
         <Text style={styles.fecha}>Hora de Inicio</Text>
         <View style={styles.textInputStack}>
           <TextInput

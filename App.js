@@ -21,17 +21,20 @@ function MyStack() {
     <Stack.Navigator screenOptions={{
       headerShown: false
     }}>
-        
-        <Stack.Screen name="ExtensionPermisoTrabajo"
-        component={ExtensionPermisoTrabajo} />
-     
-      <Stack.Screen name="Cierre Trabajo"
+           
+           <Stack.Screen name="Cierre Trabajo"
         component={CierreAutorizacionTrabajo} />
-      <Stack.Screen name="Datos-Solicitante"
-        component={DatosSolicitante} />
-        <Stack.Screen name="Aprobacion Area"
+       <Stack.Screen name="ExtensionPermisoTrabajo"
+        component={ExtensionPermisoTrabajo} />
+       <Stack.Screen name="Aprobacion Area"
         component={AprobacionArea} />
 
+           <Stack.Screen name="Datos-Solicitante"
+        component={DatosSolicitante} />
+       
+
+   
+       
         
 
      

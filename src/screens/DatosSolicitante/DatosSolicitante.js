@@ -60,7 +60,7 @@ const onChange = (event, selectedDate) => {
         <TextInput
           keyboardType="numeric" 
           placeholder="Ingrese celular del supervisor"
-          maxLength={12}
+          maxLength={5}
           multiline={false}
           spellCheck={true}
           textBreakStrategy="simple"
