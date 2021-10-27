@@ -28,7 +28,7 @@ function AprobacionArea(props) {
         <Text style={styles.nCelular}>N° Celular</Text>
         <TextInput
           placeholder="Ingrese celular del supervisor"
-          maxLength={140}
+          maxLength={50}
           multiline={false}
           spellCheck={true}
           textBreakStrategy="simple"
