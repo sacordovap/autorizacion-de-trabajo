@@ -112,7 +112,7 @@ function DatosSolicitante(props) {
         <TextInput
           keyboardType="numeric"
           placeholder="Ingrese celular del supervisor"
-          maxLength={5}
+          maxLength={12}
           multiline={false}
           spellCheck={true}
           textBreakStrategy="simple"
@@ -126,14 +126,14 @@ function DatosSolicitante(props) {
             editable={false}
             value={date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()}
             style={styles.textInput}
-          ></TextInput>  
-           <TouchableOpacity onPress={showDatepicker}>
+          ></TextInput>
+          <TouchableOpacity onPress={showDatepicker}>
             <FontAwesomeIcon
               name="calendar-times-o"
               style={styles.iconoFecha}
-            ></FontAwesomeIcon></TouchableOpacity>       
+            ></FontAwesomeIcon></TouchableOpacity>
         </View>
-       
+
         <Text style={styles.supervisorAcargo1}>Supervisor Ejecutante</Text>
         <TextInput
           placeholder="Ingrese nombre del supervisor"
@@ -153,10 +153,10 @@ function DatosSolicitante(props) {
               '  -  ' + date2.getHours() + ":" + date2.getMinutes()}
             editable={false}
             style={styles.fechaInicioInput}
-          ></TextInput>          
+          ></TextInput>
         </View>
         <View style={styles.fechaInicioInputStack}>
-        <TouchableOpacity onPress={showDatepicker2}><MaterialCommunityIconsIcon
+          <TouchableOpacity onPress={showDatepicker2}><MaterialCommunityIconsIcon
             name="calendar-multiple"
             style={styles.iconoFecha1}
           ></MaterialCommunityIconsIcon></TouchableOpacity>
@@ -165,7 +165,7 @@ function DatosSolicitante(props) {
               name="clock-outline"
               style={styles.icon3}
             ></MaterialCommunityIconsIcon></TouchableOpacity></View>
-            
+
         <Text style={styles.fechaFin}>Fecha y Hora de Fin</Text>
         <View style={styles.fechaFinInputStack}>
           <TextInput
@@ -174,9 +174,9 @@ function DatosSolicitante(props) {
               '  -  ' + date3.getHours() + ":" + date3.getMinutes()}
             editable={false}
             style={styles.fechaFinInput}
-          ></TextInput>
+          ></TextInput> 
         </View>
-        <View style={styles.fechaFinInputStack}>          
+        <View style={styles.fechaFinInputStack}>
           <TouchableOpacity onPress={showDatepicker3} ><MaterialCommunityIconsIcon
             name="calendar-multiple-check"
             style={styles.iconoFecha2}
