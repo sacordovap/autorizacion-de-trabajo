@@ -12,7 +12,7 @@ export default StyleSheet.create({
         marginTop: 38,
       },
       contenedorData: {
-        height: 1035,
+        height: 1000,
         backgroundColor: "rgba(255,255,255,1)",
         overflow: "hidden",
         shadowColor: "rgba(155,155,155,1)",

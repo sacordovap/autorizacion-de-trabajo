@@ -16,51 +16,87 @@ function CierreAutorizacionTrabajo(props) {
         <Text style={styles.supervisorAcargo}>
         ¿Han sido cerrados todos los permisos de trabajo?
         </Text>
-        <TextInput
-          placeholder="Si"
-          maxLength={140}
-          multiline={false}
-          spellCheck={true}
-          textBreakStrategy="simple"
-          dataDetector="all"
-          defaultValue=""
-          style={styles.ingresoSupervisor}
-        ></TextInput>
-         <TextInput
-          placeholder="No"
-          maxLength={140}
-          multiline={false}
-          spellCheck={true}
-          textBreakStrategy="simple"
-          dataDetector="all"
-          defaultValue=""
-          style={styles.ingresoSupervisor}
-        ></TextInput>
-       
-        <Text style={styles.fecha}>Hora de Inicio</Text>
+        <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
           <TextInput
-            placeholder="Seleccione hora Inicio"
+            placeholder="Marque"
             editable={false}
             style={styles.textInput}
           ></TextInput>
           <FontAwesomeIcon
-            name="clock-o"
+            name="check-circle-o"
             style={styles.iconoFecha}
           ></FontAwesomeIcon>
         </View>
-        <Text style={styles.fecha}>Hora de Fin</Text>
+        <Text style={styles.fecha}>No</Text>
         <View style={styles.textInputStack}>
           <TextInput
-            placeholder="Seleccione hora Fin"
+            placeholder="Marque"
             editable={false}
             style={styles.textInput}
           ></TextInput>
           <FontAwesomeIcon
-            name="clock-o"
+            name="check-circle-o"
             style={styles.iconoFecha}
           ></FontAwesomeIcon>
         </View>
+        
+        <Text style={styles.supervisorAcargo}>
+        ¿Se ha culminado el trabajo de acuerdo a lo planificado?
+        </Text>
+        <Text style={styles.fecha}>Si</Text>
+        <View style={styles.textInputStack}>
+          <TextInput
+            placeholder="Marque"
+            editable={false}
+            style={styles.textInput}
+          ></TextInput>
+          <FontAwesomeIcon
+            name="check-circle-o"
+            style={styles.iconoFecha}
+          ></FontAwesomeIcon>
+        </View>
+        <Text style={styles.fecha}>No</Text>
+        <View style={styles.textInputStack}>
+          <TextInput
+            placeholder="Marque"
+            editable={false}
+            style={styles.textInput}
+          ></TextInput>
+          <FontAwesomeIcon
+            name="check-circle-o"
+            style={styles.iconoFecha}
+          ></FontAwesomeIcon>
+        </View>
+        <Text style={styles.supervisorAcargo}>
+        ¿Se entrega el àrea en codiciones adecuadas?
+        </Text>
+        <Text style={styles.fecha}>Si</Text>
+        <View style={styles.textInputStack}>
+          <TextInput
+            placeholder="Marque"
+            editable={false}
+            style={styles.textInput}
+          ></TextInput>
+          <FontAwesomeIcon
+            name="check-circle-o"
+            style={styles.iconoFecha}
+          ></FontAwesomeIcon>
+        </View>
+        <Text style={styles.fecha}>No</Text>
+        <View style={styles.textInputStack}>
+          <TextInput
+            placeholder="Marque"
+            editable={false}
+            style={styles.textInput}
+          ></TextInput>
+          <FontAwesomeIcon
+            name="check-circle-o"
+            style={styles.iconoFecha}
+          ></FontAwesomeIcon>
+        </View>
+        
+        
         <Text style={styles.supervisorAcargo1}>Supervisor de Marcobre del Trabajo</Text>
         <TextInput
           placeholder="Ingrese nombre del supervisor"

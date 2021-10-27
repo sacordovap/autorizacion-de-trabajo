@@ -26,10 +26,12 @@ function AprobacionArea(props) {
           defaultValue=""
           style={styles.ingresoSupervisor}
         ></TextInput>
+       
         <Text style={styles.nCelular}>N° Celular</Text>
         <TextInput
+          keyboardType="numeric" 
           placeholder="Ingrese celular del supervisor"
-          maxLength={140}
+          maxLength={12}
           multiline={false}
           spellCheck={true}
           textBreakStrategy="simple"
