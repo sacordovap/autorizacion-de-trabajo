@@ -9,6 +9,7 @@ import CierreAutorizacionTrabajo from "./src/screens/CierreAutorizacionTrabajo/C
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Formulario from './src/screens/Form_Solicitud/Fomulario';
+import Home from './src/screens/Home';
 
 
 const Stack = createNativeStackNavigator();
@@ -20,18 +21,19 @@ function MyStack() {
     <Stack.Navigator screenOptions={{
       headerShown: false
     }}>
-
-      <Stack.Screen name="Formulario"
-        component={Formulario} />
+      <Stack.Screen name="Home"
+        component={Home} />
       <Stack.Screen name="Aprobacion Area"
         component={AprobacionArea} />
+      <Stack.Screen name="Formulario"
+        component={Formulario} />
       <Stack.Screen name="Datos-Solicitante"
         component={DatosSolicitante} />
       <Stack.Screen name="ExtensionPermisoTrabajo"
         component={ExtensionPermisoTrabajo} />
       <Stack.Screen name="Cierre Trabajo"
         component={CierreAutorizacionTrabajo} />
-
+      
 
     </Stack.Navigator>
   )
