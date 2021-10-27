@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { StyleSheet, View, Text, TextInput, ScrollView } from "react-native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import RadioButtonGroup, { RadioButtonItem } from "expo-radio-button";
+import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from "./Cierrestyle";
 
 
@@ -18,83 +20,83 @@ function CierreAutorizacionTrabajo(props) {
         </Text>
         <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
-          <TextInput
-            placeholder="Marque"
-            editable={false}
-            style={styles.textInput}
-          ></TextInput>
-          <FontAwesomeIcon
-            name="check-circle-o"
-            style={styles.iconoFecha}
-          ></FontAwesomeIcon>
+        <RadioButtonGroup
+          containerStyle={{ marginBottom: 10 }}
+            /*selected={current}*/
+            onSelected={(value) => setCurrent(value)}
+          radioBackground="green"
+         >
+        <RadioButtonItem value="test2" label="Example with string" />
+      </RadioButtonGroup>
         </View>
         <Text style={styles.fecha}>No</Text>
         <View style={styles.textInputStack}>
-          <TextInput
-            placeholder="Marque"
-            editable={false}
-            style={styles.textInput}
-          ></TextInput>
-          <FontAwesomeIcon
-            name="check-circle-o"
-            style={styles.iconoFecha}
-          ></FontAwesomeIcon>
-        </View>
-        
+        <RadioButtonGroup
+
+          containerStyle={{ marginBottom: 10 }}
+            /*selected={current}*/
+            onSelected={(value) => setCurrent(value)}
+          radioBackground="green"
+         >
+        <RadioButtonItem value="test2" label="Example with string" />
+      </RadioButtonGroup>
+      </View>
+
+      
         <Text style={styles.supervisorAcargo}>
         ¿Se ha culminado el trabajo de acuerdo a lo planificado?
         </Text>
         <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
-          <TextInput
-            placeholder="Marque"
-            editable={false}
-            style={styles.textInput}
-          ></TextInput>
-          <FontAwesomeIcon
-            name="check-circle-o"
-            style={styles.iconoFecha}
-          ></FontAwesomeIcon>
-        </View>
+        <RadioButtonGroup
+
+          containerStyle={{ marginBottom: 10 }}
+            /*selected={current}*/
+            onSelected={(value) => setCurrent(value)}
+          radioBackground="green"
+         >
+        <RadioButtonItem value="test2" label="Example with string" />
+      </RadioButtonGroup>
+      </View>
         <Text style={styles.fecha}>No</Text>
         <View style={styles.textInputStack}>
-          <TextInput
-            placeholder="Marque"
-            editable={false}
-            style={styles.textInput}
-          ></TextInput>
-          <FontAwesomeIcon
-            name="check-circle-o"
-            style={styles.iconoFecha}
-          ></FontAwesomeIcon>
-        </View>
+        <RadioButtonGroup
+
+          containerStyle={{ marginBottom: 10 }}
+            /*selected={current}*/
+            onSelected={(value) => setCurrent(value)}
+          radioBackground="green"
+         >
+        <RadioButtonItem value="test2" label="Example with string" />
+      </RadioButtonGroup>
+      </View>
         <Text style={styles.supervisorAcargo}>
         ¿Se entrega el àrea en codiciones adecuadas?
         </Text>
         <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
-          <TextInput
-            placeholder="Marque"
-            editable={false}
-            style={styles.textInput}
-          ></TextInput>
-          <FontAwesomeIcon
-            name="check-circle-o"
-            style={styles.iconoFecha}
-          ></FontAwesomeIcon>
-        </View>
+        <RadioButtonGroup
+
+          containerStyle={{ marginBottom: 10 }}
+            /*selected={current}*/
+            onSelected={(value) => setCurrent(value)}
+          radioBackground="green"
+         >
+        <RadioButtonItem value="test2" label="Example with string" />
+      </RadioButtonGroup>
+      </View>
         <Text style={styles.fecha}>No</Text>
         <View style={styles.textInputStack}>
-          <TextInput
-            placeholder="Marque"
-            editable={false}
-            style={styles.textInput}
-          ></TextInput>
-          <FontAwesomeIcon
-            name="check-circle-o"
-            style={styles.iconoFecha}
-          ></FontAwesomeIcon>
-        </View>
+        <RadioButtonGroup
+
+          containerStyle={{ marginBottom: 10 }}
+            /*selected={current}*/
+            onSelected={(value) => setCurrent(value)}
+          radioBackground="green"
+         >
+        <RadioButtonItem value="test2" label="Example with string" />
+      </RadioButtonGroup>
+      </View>
         
         
         <Text style={styles.supervisorAcargo1}>Supervisor de Marcobre del Trabajo</Text>
