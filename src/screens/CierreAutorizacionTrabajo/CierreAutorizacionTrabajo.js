@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { StyleSheet, View, Text, TextInput, ScrollView } from "react-native";
+import React, { Component, useState } from "react";
+import { StyleSheet, View, Text, TextInput, ScrollView, TouchableOpacity } from "react-native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import RadioButtonGroup, { RadioButtonItem } from "expo-radio-button";
@@ -9,12 +9,13 @@ import styles from "./Cierrestyle";
 
 
 function CierreAutorizacionTrabajo(props) {
+ 
   console.log(props);
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.titulo}>Cierre de Autorizacion de Trabajo</Text>
+      <Text style={styles.titulo}> </Text>
       <View style={styles.contenedorData}>
-        <Text style={styles.subtitulo}>Datos del Solicitante</Text>
+        <Text style={styles.subtitulo}>Cierre de Autorizacion de Trabajo</Text>
         <Text style={styles.supervisorAcargo}>
         ¿Han sido cerrados todos los permisos de trabajo?
         </Text>
@@ -75,6 +76,7 @@ function CierreAutorizacionTrabajo(props) {
         </Text>
         <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
+<<<<<<< HEAD
         <RadioButtonGroup
 
           containerStyle={{ marginBottom: 10 }}
@@ -99,6 +101,30 @@ function CierreAutorizacionTrabajo(props) {
       </View>
         
         
+=======
+          <TextInput
+            placeholder="Marque"
+            editable={false}
+            style={styles.textInput}
+          ></TextInput>
+          <TouchableOpacity><FontAwesomeIcon
+            name="check-circle-o"
+            style={styles.iconoFecha}
+          ></FontAwesomeIcon></TouchableOpacity>
+        </View>
+        <Text style={styles.fecha}>No</Text>
+        <View style={styles.textInputStack}>
+          <TextInput
+            placeholder="Marque"
+            editable={false}
+            style={styles.textInput}
+          ></TextInput>
+          <TouchableOpacity><FontAwesomeIcon
+            name="check-circle-o"
+            style={styles.iconoFecha}
+          ></FontAwesomeIcon></TouchableOpacity>
+        </View>        
+>>>>>>> dd9e63804e3f61caef07fa58ac08e69c49c41bf4
         <Text style={styles.supervisorAcargo1}>Supervisor de Marcobre del Trabajo</Text>
         <TextInput
           placeholder="Ingrese nombre del supervisor"
@@ -125,11 +151,9 @@ function CierreAutorizacionTrabajo(props) {
           dataDetector="all"
           defaultValue=""
           editable={true}
-          style={styles.ingresoSupervisor1}
-
-         
+          style={styles.ingresoSupervisor2}         
         ></TextInput>
-      </View>
+        </View>
     </ScrollView>
   );
 }

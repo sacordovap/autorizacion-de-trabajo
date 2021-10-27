@@ -12,7 +12,6 @@ export default StyleSheet.create({
         marginTop: 38,
       },
       contenedorData: {
-        height: 1000,
         backgroundColor: "rgba(255,255,255,1)",
         overflow: "hidden",
         shadowColor: "rgba(155,155,155,1)",
@@ -28,7 +27,9 @@ export default StyleSheet.create({
         borderRadius: 6,
         marginTop: 17,
         marginLeft: 23,
-        marginRight:23
+        marginRight:23,
+        
+        marginBottom:40,
       },
       subtitulo: {
         color: "rgba(155,155,155,1)",
@@ -92,14 +93,13 @@ export default StyleSheet.create({
       iconoFecha: {
         top: 4,
         left: 252,
-        position: "absolute",
         color: "rgba(108,100,100,1)",
         fontSize: 32,
         height: 32,
         width: 32
       },
       textInputStack: {
-        width: 291,
+        width: 270,
         height: 40,
         marginTop: 11,
         marginLeft: 10
@@ -119,7 +119,6 @@ export default StyleSheet.create({
         marginTop: 12,
         marginLeft: 12,
         marginRight:12,
-        height: "3.5%"
       },
       ingresoSupervisor2: {
         color: "#121212",
@@ -131,7 +130,7 @@ export default StyleSheet.create({
         marginTop: 12,
         marginLeft: 12,
         marginRight:12,
-        height: "3.5%"
+        marginBottom:30
       },
       fechaInicio: {
         color: "#121212",

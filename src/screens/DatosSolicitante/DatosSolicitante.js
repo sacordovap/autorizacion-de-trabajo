@@ -8,12 +8,20 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  FlatList,
+  CheckBox,
+  Button,
+  Modal,
 } from "react-native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import FeatherIcon from "react-native-vector-icons/Feather";
+import Constants from 'expo-constants';
+
+// or any pure javascript modules available in npm
+import { Card } from 'react-native-paper';
 
 import styles from "./DatosStyle";
 
@@ -88,13 +96,69 @@ function DatosSolicitante(props) {
   const showTimepicker3 = () => {
     showMode3('time');
   };
+
+
+
+  //checkbox
+  const data = [
+    { id: 1, txt: 'trabajo en espacios confinados', isChecked: false },
+    { id: 2, txt: 'permiso aislamiento, bloqueo', isChecked: false },
+    { id: 3, txt: 'Operaciones de Izaje', isChecked: false },
+    { id: 4, txt: 'trabajo en altura', isChecked: false },
+    { id: 5, txt: 'Trabajo en caliente', isChecked: false },
+    { id: 6, txt: 'Trabajos electricos', isChecked: false },
+    { id: 7, txt: 'Trabajos de instalacion', isChecked: false },
+  ];
+
+
+  const [products, setProducts] = useState(data);
+
+  const handleChange = (id) => {
+    let temp = products.map((product) => {
+      if (id === product.id) {
+        return { ...product, isChecked: !product.isChecked };
+      }
+      return product;
+    });
+    setProducts(temp);
+  };
+  
+  let selected = products.filter((product) => product.isChecked);
+  console.log(selected);
+  const renderFlatList = (renderData) => {
+    return (
+      <FlatList
+        data={renderData}
+        renderItem={({ item }) => (
+          <Card style={{ margin: 5 }}>
+            <View style={styles.card}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  flex: 1,
+                  justifyContent: 'space-between',
+                }}>
+                <CheckBox
+                  value={item.isChecked}
+                  onChange={() => {
+                    handleChange(item.id);
+                  }}
+                />
+                <Text>{item.txt}</Text>
+              </View>
+            </View>
+          </Card>
+        )}
+      />
+    );
+  };
   return (
 
     <ScrollView style={styles.container}>
       <Text style={styles.titulo}>Autorización de trabajo</Text>
 
       <View style={styles.contenedorData}>
-
+ 
         <Text style={styles.subtitulo}>Datos por parte del Solicitante</Text>
         <Text style={styles.supervisorAcargo}>
           Supervisor de Marcobre Responsable
@@ -193,6 +257,7 @@ function DatosSolicitante(props) {
         <TextInput
           placeholder="Ingrese la descripción"
           editable={true}
+          multiline
           spellCheck={true}
           style={styles.descripcionInput}
         ></TextInput>
@@ -205,7 +270,9 @@ function DatosSolicitante(props) {
           style={styles.areaIntervenirInput}
         ></TextInput>
         <Text style={styles.permisos}>Permisos que se requieren</Text>
-        <View style={styles.permisosBox}></View>
+        <View style={styles.permisosBox}>
+        <View style={{ flex: 1 }}>{renderFlatList(products)}</View>
+        </View>
         {show && (
           <DateTimePicker
             testID="dateTimePicker"
