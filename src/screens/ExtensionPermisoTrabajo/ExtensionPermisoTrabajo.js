@@ -7,6 +7,7 @@ import styles from "./Extensionstyle";
 
 
 function ExtensionPermisoTrabajo(props) {
+  console.log(props);
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.titulo}>Extension del Permiso de Trabajo</Text>

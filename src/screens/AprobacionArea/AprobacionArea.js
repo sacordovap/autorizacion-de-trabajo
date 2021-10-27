@@ -7,6 +7,7 @@ import styles from "./AprobacionStyle";
 
 
 function AprobacionArea(props) {
+  console.log(props);
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.titulo}>Aprobacion del Dueño del Area</Text>

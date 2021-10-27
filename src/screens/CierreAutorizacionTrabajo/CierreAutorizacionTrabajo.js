@@ -7,6 +7,7 @@ import styles from "./Cierrestyle";
 
 
 function CierreAutorizacionTrabajo(props) {
+  console.log(props);
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.titulo}>Cierre de Autorizacion de Trabajo</Text>

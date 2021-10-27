@@ -6,9 +6,7 @@ import AprobacionArea from "./src/screens/AprobacionArea/AprobacionArea";
 import ExtensionPermisoTrabajo from "./src/screens/ExtensionPermisoTrabajo/ExtensionPermisoTrabajo";
 import CierreAutorizacionTrabajo from "./src/screens/CierreAutorizacionTrabajo/CierreAutorizacionTrabajo";
 
-
-
- import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
@@ -21,19 +19,14 @@ function MyStack() {
     <Stack.Navigator screenOptions={{
       headerShown: false
     }}>
-       <Stack.Screen name="Cierre Trabajo"
-        component={CierreAutorizacionTrabajo} />
-      <Stack.Screen name="ExtensionPermisoTrabajo"
-        component={ExtensionPermisoTrabajo} />
-      <Stack.Screen name="Aprobacion Area"
-        component={AprobacionArea} />
       <Stack.Screen name="Datos-Solicitante"
         component={DatosSolicitante} />
-        
-       
-      
-
-
+      <Stack.Screen name="ExtensionPermisoTrabajo"
+        component={ExtensionPermisoTrabajo} />
+      <Stack.Screen name="Cierre Trabajo"
+        component={CierreAutorizacionTrabajo} />
+      <Stack.Screen name="Aprobacion Area"
+        component={AprobacionArea} />
 
     </Stack.Navigator>
   )

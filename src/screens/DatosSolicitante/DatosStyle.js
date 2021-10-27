@@ -3,7 +3,7 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "rgba(255,255,255,1)",
-        marginTop:21
+        marginTop:21,
       },
       titulo: {
         color: "rgba(64,66,67,1)",
@@ -13,7 +13,6 @@ export default StyleSheet.create({
         marginTop: 17,
       },
       contenedorData: {
-        height: 1035,
         backgroundColor: "rgba(255,255,255,1)",
         overflow: "hidden",
         shadowColor: "rgba(155,155,155,1)",
@@ -27,6 +26,7 @@ export default StyleSheet.create({
         borderWidth: 2,
         borderColor: "rgba(241,241,241,1)",
         borderRadius: 6,
+        marginBottom:50,
         marginTop: 17,
         marginLeft: 23,
         marginRight:23
@@ -82,7 +82,7 @@ export default StyleSheet.create({
         position: "absolute",
         color: "#121212",
         height: 40,
-        width: 291,
+        width: 240,
         left: 0,
         textAlign: "justify",
         backgroundColor: "rgba(241,241,241,1)",
@@ -93,7 +93,6 @@ export default StyleSheet.create({
       iconoFecha: {
         top: 4,
         left: 252,
-        position: "absolute",
         color: "rgba(108,100,100,1)",
         fontSize: 32,
         height: 32,
@@ -132,7 +131,7 @@ export default StyleSheet.create({
         position: "absolute",
         color: "#121212",
         height: 40,
-        width: 291,
+        width: 200,
         left: 0,
         textAlign: "justify",
         backgroundColor: "rgba(241,241,241,1)",
@@ -140,20 +139,28 @@ export default StyleSheet.create({
         borderColor: "rgba(225,222,222,1)",
         borderRadius: 5
       },
-      iconoFecha1: {
-        top: 3,
-        left: 250,
-        position: "absolute",
+      iconoFecha1: {        
+       top:3,
+        left: 5,
         color: "rgba(108,100,100,1)",
         fontSize: 32,
         height: 35,
         width: 32
       },
+      icon3: {
+        top:3,
+        color: "rgba(122,112,112,1)",
+        left: 15,
+        fontSize: 32,
+        height: 35,
+        width: 32,
+      },
       fechaInicioInputStack: {
-        width: 291,
         height: 40,
+        flexDirection: "row",
         marginTop: 10,
-        marginLeft: 12
+        marginLeft: 12,
+        marginRight: 12
       },
       fechaFin: {
         color: "#121212",
@@ -165,28 +172,27 @@ export default StyleSheet.create({
         position: "absolute",
         color: "#121212",
         height: 40,
-        width: 291,
+        width: 200,
         left: 0,
-        textAlign: "justify",
         backgroundColor: "rgba(241,241,241,1)",
         borderWidth: 1,
         borderColor: "rgba(225,222,222,1)",
         borderRadius: 5
       },
-      iconoFecha2: {
+      iconoFecha2: {          
         top: 2,
-        left: 252,
-        position: "absolute",
+        left: 5,
         color: "rgba(108,100,100,1)",
         fontSize: 32,
         height: 35,
         width: 32
-      },
+      },    
       fechaFinInputStack: {
-        width: 291,
         height: 40,
-        marginTop: 11,
-        marginLeft: 10
+        flexDirection: "row",
+        marginTop: 10,
+        marginLeft: 12,
+        marginRight: 12
       },
       descripcionDelTrabajo: {
         color: "#121212",
