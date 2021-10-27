@@ -4,12 +4,18 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import RadioButtonGroup, { RadioButtonItem } from "expo-radio-button";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { RadioButton } from 'react-native-paper';
+
 import styles from "./Cierrestyle";
 
 
 
 function CierreAutorizacionTrabajo(props) {
- 
+
+
+  const [value, setValue] = useState('yes')
+  const [value2, setValue2] = useState('yes')
+  const [value3, setValue3] = useState('yes')
   console.log(props);
   return (
     <ScrollView style={styles.container}>
@@ -17,93 +23,63 @@ function CierreAutorizacionTrabajo(props) {
       <View style={styles.contenedorData}>
         <Text style={styles.subtitulo}>Cierre de Autorizacion de Trabajo</Text>
         <Text style={styles.supervisorAcargo}>
-        ¿Han sido cerrados todos los permisos de trabajo?
+          ¿Han sido cerrados todos los permisos de trabajo?
         </Text>
-        <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
-        <RadioButtonGroup
-
-          containerStyle={{ marginBottom: 10 }}
-            /*selected={current} */
-            onSelected={(value) => setCurrent(value)}
-          radioBackground="green"
-         >
-        <RadioButtonItem value="test2" label="Example with string" />
-      </RadioButtonGroup>
-      </View>
-        <Text style={styles.fecha}>No</Text>
-        <View style={styles.textInputStack}>
-        <RadioButtonGroup
-
-          containerStyle={{ marginBottom: 10 }}
-            /*selected={current} */
-            onSelected={(value) => setCurrent(value)}
-          radioBackground="green"
-         >
-        <RadioButtonItem value="test2" label="Example with string" />
-      </RadioButtonGroup>
-      </View>
+          <RadioButton.Group
+            onValueChange={value => setValue(value)}
+            value={value}      >
+            <View>
+              <Text>Si</Text>
+              <RadioButton value="yes" />
+            </View>
+            <View>
+              <Text>No</Text>
+              <RadioButton value="no" />
+            </View>
+          </RadioButton.Group>
+        </View>
 
         <Text style={styles.supervisorAcargo}>
-        ¿Se ha culminado el trabajo de acuerdo a lo planificado?
+          ¿Se ha culminado el trabajo de acuerdo a lo planificado?
         </Text>
-        <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
-        <RadioButtonGroup
-
-          containerStyle={{ marginBottom: 10 }}
-            /*selected={current} */
-            onSelected={(value) => setCurrent(value)}
-          radioBackground="green"
-         >
-        <RadioButtonItem value="test2" label="Example with string" />
-      </RadioButtonGroup>
-      </View>
-        <Text style={styles.fecha}>No</Text>
-        <View style={styles.textInputStack}>
-        <RadioButtonGroup
-
-          containerStyle={{ marginBottom: 10 }}
-            /*selected={current} */
-            onSelected={(value) => setCurrent(value)}
-          radioBackground="green"
-          >
-          <RadioButtonItem value="test2" label="Example with string" />
-          </RadioButtonGroup>
-      </View>
+          <RadioButton.Group
+            onValueChange={value => setValue2(value)}
+            value={value2}      >
+            <View>
+              <Text>Si</Text>
+              <RadioButton value="yes" />
+            </View>
+            <View>
+              <Text>No</Text>
+              <RadioButton value="no" />
+            </View>
+          </RadioButton.Group>
+        </View>
         <Text style={styles.supervisorAcargo}>
-        ¿Se entrega el àrea en codiciones adecuadas?
+          ¿Se entrega el àrea en codiciones adecuadas?
         </Text>
-        <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
-        <RadioButtonGroup
+          <RadioButton.Group
+            onValueChange={value => setValue3(value)}
+            value={value3}      >
+            <View>
+              <Text>Si</Text>
+              <RadioButton value="yes" />
+            </View>
+            <View>
+              <Text>No</Text>
+              <RadioButton value="no" />
+            </View>
+          </RadioButton.Group>
+        </View>
 
-          containerStyle={{ marginBottom: 10 }}
-            /*selected={current} */
-            onSelected={(value) => setCurrent(value)}
-          radioBackground="green"
-         >
-        <RadioButtonItem value="test2" label="Example with string" />
-      </RadioButtonGroup>
-      </View>
-        <Text style={styles.fecha}>No</Text>
-        <View style={styles.textInputStack}>
-        <RadioButtonGroup
 
-          containerStyle={{ marginBottom: 10 }}
-            /*selected={current} */
-            onSelected={(value) => setCurrent(value)}
-          radioBackground="green"
-         >
-        <RadioButtonItem value="test2" label="Example with string" />
-      </RadioButtonGroup>
-      </View>
-        
-        
         <Text style={styles.supervisorAcargo1}>Supervisor de Marcobre del Trabajo</Text>
         <TextInput
           placeholder="Ingrese nombre del supervisor"
-      
+
           maxLength={140}
           multiline={false}
           spellCheck={true}
@@ -113,12 +89,12 @@ function CierreAutorizacionTrabajo(props) {
           editable={true}
           style={styles.ingresoSupervisor1}
 
-         
+
         ></TextInput>
         <Text style={styles.supervisorAcargo1}>Supervisor Responsable del Area</Text>
         <TextInput
           placeholder="Ingrese nombre del supervisor del area"
-      
+
           maxLength={140}
           multiline={false}
           spellCheck={true}
@@ -126,11 +102,11 @@ function CierreAutorizacionTrabajo(props) {
           dataDetector="all"
           defaultValue=""
           editable={true}
-          style={styles.ingresoSupervisor2}         
+          style={styles.ingresoSupervisor2}
         ></TextInput>
-        </View>
+      </View>
     </ScrollView>
   );
 }
 
-export default  CierreAutorizacionTrabajo;
+export default CierreAutorizacionTrabajo;

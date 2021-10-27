@@ -100,7 +100,6 @@ export default StyleSheet.create({
       },
       textInputStack: {
         width: 270,
-        height: 40,
         marginTop: 11,
         marginLeft: 10
       },
