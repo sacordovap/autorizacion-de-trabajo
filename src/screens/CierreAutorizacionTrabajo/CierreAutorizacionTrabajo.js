@@ -22,20 +22,21 @@ function CierreAutorizacionTrabajo(props) {
         <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
         <RadioButtonGroup
+
           containerStyle={{ marginBottom: 10 }}
-            /*selected={current}*/
+            /*selected={current} */
             onSelected={(value) => setCurrent(value)}
           radioBackground="green"
          >
         <RadioButtonItem value="test2" label="Example with string" />
       </RadioButtonGroup>
-        </View>
+      </View>
         <Text style={styles.fecha}>No</Text>
         <View style={styles.textInputStack}>
         <RadioButtonGroup
 
           containerStyle={{ marginBottom: 10 }}
-            /*selected={current}*/
+            /*selected={current} */
             onSelected={(value) => setCurrent(value)}
           radioBackground="green"
          >
@@ -43,7 +44,6 @@ function CierreAutorizacionTrabajo(props) {
       </RadioButtonGroup>
       </View>
 
-      
         <Text style={styles.supervisorAcargo}>
         ¿Se ha culminado el trabajo de acuerdo a lo planificado?
         </Text>
@@ -52,7 +52,7 @@ function CierreAutorizacionTrabajo(props) {
         <RadioButtonGroup
 
           containerStyle={{ marginBottom: 10 }}
-            /*selected={current}*/
+            /*selected={current} */
             onSelected={(value) => setCurrent(value)}
           radioBackground="green"
          >
@@ -64,23 +64,22 @@ function CierreAutorizacionTrabajo(props) {
         <RadioButtonGroup
 
           containerStyle={{ marginBottom: 10 }}
-            /*selected={current}*/
+            /*selected={current} */
             onSelected={(value) => setCurrent(value)}
           radioBackground="green"
-         >
-        <RadioButtonItem value="test2" label="Example with string" />
-      </RadioButtonGroup>
+          >
+          <RadioButtonItem value="test2" label="Example with string" />
+          </RadioButtonGroup>
       </View>
         <Text style={styles.supervisorAcargo}>
         ¿Se entrega el àrea en codiciones adecuadas?
         </Text>
         <Text style={styles.fecha}>Si</Text>
         <View style={styles.textInputStack}>
-<<<<<<< HEAD
         <RadioButtonGroup
 
           containerStyle={{ marginBottom: 10 }}
-            /*selected={current}*/
+            /*selected={current} */
             onSelected={(value) => setCurrent(value)}
           radioBackground="green"
          >
@@ -92,7 +91,7 @@ function CierreAutorizacionTrabajo(props) {
         <RadioButtonGroup
 
           containerStyle={{ marginBottom: 10 }}
-            /*selected={current}*/
+            /*selected={current} */
             onSelected={(value) => setCurrent(value)}
           radioBackground="green"
          >
@@ -101,30 +100,6 @@ function CierreAutorizacionTrabajo(props) {
       </View>
         
         
-=======
-          <TextInput
-            placeholder="Marque"
-            editable={false}
-            style={styles.textInput}
-          ></TextInput>
-          <TouchableOpacity><FontAwesomeIcon
-            name="check-circle-o"
-            style={styles.iconoFecha}
-          ></FontAwesomeIcon></TouchableOpacity>
-        </View>
-        <Text style={styles.fecha}>No</Text>
-        <View style={styles.textInputStack}>
-          <TextInput
-            placeholder="Marque"
-            editable={false}
-            style={styles.textInput}
-          ></TextInput>
-          <TouchableOpacity><FontAwesomeIcon
-            name="check-circle-o"
-            style={styles.iconoFecha}
-          ></FontAwesomeIcon></TouchableOpacity>
-        </View>        
->>>>>>> dd9e63804e3f61caef07fa58ac08e69c49c41bf4
         <Text style={styles.supervisorAcargo1}>Supervisor de Marcobre del Trabajo</Text>
         <TextInput
           placeholder="Ingrese nombre del supervisor"
