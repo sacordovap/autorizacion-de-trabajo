@@ -225,11 +225,29 @@ export default StyleSheet.create({
         marginLeft: 11
       },
       permisosBox: {
-        height: 245,
         backgroundColor: "rgba(241,241,241,1)",
         borderWidth: 1,
         borderColor: "rgba(225,222,222,1)",
         borderRadius: 5,
         margin:15
-      }    
+      },
+      card: {
+        padding: 10,
+        margin: 5,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+      },
+      modalView: {
+        margin: 20,
+        backgroundColor: 'white',
+        borderRadius: 20,
+        padding: 5,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        elevation: 5,
+      },
+      text: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+      },
 });

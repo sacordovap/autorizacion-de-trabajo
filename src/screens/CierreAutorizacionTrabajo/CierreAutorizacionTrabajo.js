@@ -7,54 +7,7 @@ import styles from "./Cierrestyle";
 
 
 function CierreAutorizacionTrabajo(props) {
-  const [date, setDate] = useState(new Date());
-  const [mode, setMode] = useState('date');
-
-  const [date2, setDate2] = useState(new Date());
-  const [mode2, setMode2] = useState('date2');
-
-  const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false);
-
-  const onChange = (event, selectedDate) => {
-    const currentDate = selectedDate || date;
-    setShow(Platform.OS === 'ios');
-    setDate(currentDate);
-  };
-  const onChange2 = (event, selectedDate) => {
-    const currentDate = selectedDate || date2;
-    setShow2(Platform.OS === 'ios');
-    setDate2(currentDate);
-  };
-
-
-  const showMode = (currentMode) => {
-    setShow(true);
-    setMode(currentMode);
-  };
-  const showMode2 = (currentMode) => {
-    setShow2(true);
-    setMode2(currentMode);
-  };
-
-
-  //
-  const showDatepicker = () => {
-    showMode('date');
-
-  };
-  const showTimepicker = () => {
-    showMode('time');
-  };
-
-  //
-
-  const showDatepicker2 = () => {
-    showMode2('date2');
-  };
-  const showTimepicker2 = () => {
-    showMode2('time');
-  };
+ 
   console.log(props);
   return (
     <ScrollView style={styles.container}>
@@ -171,25 +124,7 @@ function CierreAutorizacionTrabajo(props) {
           editable={true}
           style={styles.ingresoSupervisor2}         
         ></TextInput>
-        {show && (
-          <DateTimePicker
-            testID="dateTimePicker"
-            value={date}
-            mode={mode}
-            is24Hour={true}
-            display="default"
-            onChange={onChange} />
-        )}
-        {show2 && (
-          <DateTimePicker
-            testID="dateTimePicker"
-            value={date2}
-            mode={mode2}
-            is24Hour={true}
-            display="default"
-            onChange={onChange2} />
-        )}
-      </View>
+        </View>
     </ScrollView>
   );
 }

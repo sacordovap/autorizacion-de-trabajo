@@ -90,7 +90,6 @@ export default StyleSheet.create({
       },
       iconoFecha: {
         left: 252,
-        position: "absolute",
         color: "rgba(108,100,100,1)",
         fontSize: 32,
         height: 32,
