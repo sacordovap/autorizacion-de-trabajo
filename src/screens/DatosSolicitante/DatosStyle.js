@@ -2,14 +2,15 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "rgba(255,255,255,1)"
+        backgroundColor: "rgba(255,255,255,1)",
+        marginTop:21
       },
       titulo: {
         color: "rgba(64,66,67,1)",
         textAlign: "center",
         fontSize: 25,
         letterSpacing: 0,
-        marginTop: 38,
+        marginTop: 17,
       },
       contenedorData: {
         height: 1035,
