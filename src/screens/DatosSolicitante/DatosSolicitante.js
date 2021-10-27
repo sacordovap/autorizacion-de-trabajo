@@ -94,7 +94,7 @@ function DatosSolicitante(props) {
       <Text style={styles.titulo}>Autorización de trabajo</Text>
 
       <View style={styles.contenedorData}>
-
+ 
         <Text style={styles.subtitulo}>Datos por parte del Solicitante</Text>
         <Text style={styles.supervisorAcargo}>
           Supervisor de Marcobre Responsable
@@ -193,6 +193,7 @@ function DatosSolicitante(props) {
         <TextInput
           placeholder="Ingrese la descripción"
           editable={true}
+          multiline
           spellCheck={true}
           style={styles.descripcionInput}
         ></TextInput>

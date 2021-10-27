@@ -10,21 +10,20 @@ function ExtensionPermisoTrabajo(props) {
   console.log(props);
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.titulo}>Extension del Permiso de Trabajo</Text>
+      <Text style={styles.titulo}> </Text>
       <View style={styles.contenedorData}>
-        <Text style={styles.subtitulo}>Datos del Solicitante</Text>
+        <Text style={styles.subtitulo}>Extension del Permiso de Trabajo</Text>
         <Text style={styles.supervisorAcargo}>
          Descripcion del motivo
         </Text>
         <TextInput
           placeholder="Ingrese el motivo"
-          maxLength={140}
-          multiline={false}
+          multiline={true}
           spellCheck={true}
           textBreakStrategy="simple"
           dataDetector="all"
           defaultValue=""
-          style={styles.ingresoSupervisor}
+          style={styles.ingresoMotivo}
         ></TextInput>
        
         <Text style={styles.fecha}>Hora de Inicio</Text>

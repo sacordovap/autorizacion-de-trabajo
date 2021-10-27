@@ -12,7 +12,7 @@ export default StyleSheet.create({
         marginTop: 38,
       },
       contenedorData: {
-        height: 550,
+        height: 500,
         backgroundColor: "rgba(255,255,255,1)",
         overflow: "hidden",
         shadowColor: "rgba(155,155,155,1)",
@@ -28,7 +28,9 @@ export default StyleSheet.create({
         borderRadius: 6,
         marginTop: 17,
         marginLeft: 23,
-        marginRight:23
+        marginRight:23,
+        
+        marginBottom:50,
       },
       subtitulo: {
         color: "rgba(155,155,155,1)",
@@ -42,7 +44,7 @@ export default StyleSheet.create({
         marginTop: 20,
         marginLeft: 12
       },
-      ingresoSupervisor: {
+      ingresoMotivo: {
         color: "#121212",
         textAlign: "left",
         backgroundColor: "rgba(241,241,241,1)",
@@ -51,8 +53,7 @@ export default StyleSheet.create({
         borderColor: "rgba(225,222,222,1)",
         marginTop: 13,
         marginLeft: 12,
-        marginRight:12,        
-        height: "3.5%"
+        marginRight:12,     
       },
       nCelular: {
         color: "#121212",
@@ -68,8 +69,7 @@ export default StyleSheet.create({
         borderRadius: 5,
         marginTop: 11,
         marginLeft: 12,
-        marginRight:12,        
-        height: "3.5%"
+        marginRight:12,  
       },
       fecha: {
         color: "#121212",
@@ -80,8 +80,7 @@ export default StyleSheet.create({
         top: 0,
         position: "absolute",
         color: "#121212",
-        height: 40,
-        width: 291,
+        width: 240,
         left: 0,
         textAlign: "justify",
         backgroundColor: "rgba(241,241,241,1)",
@@ -90,7 +89,6 @@ export default StyleSheet.create({
         borderRadius: 5
       },
       iconoFecha: {
-        top: 4,
         left: 252,
         position: "absolute",
         color: "rgba(108,100,100,1)",
@@ -119,7 +117,6 @@ export default StyleSheet.create({
         marginTop: 12,
         marginLeft: 12,
         marginRight:12,
-        height: "3.5%"
       },
       ingresoSupervisor2: {
         color: "#121212",
