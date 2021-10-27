@@ -66,7 +66,8 @@ function CierreAutorizacionTrabajo(props) {
             value={value3}      >
             <View>
               <Text>Si</Text>
-              <RadioButton value="yes" />
+              <RadioButton value="yes" 
+                        radioBackground="green"/>
             </View>
             <View>
               <Text>No</Text>

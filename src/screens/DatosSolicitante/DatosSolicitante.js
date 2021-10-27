@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect } from "react";
 import {
   StyleSheet,
   View,
@@ -13,6 +13,7 @@ import {
   CheckBox,
   Button,
   Modal,
+  LogBox
 } from "react-native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -24,8 +25,11 @@ import Constants from 'expo-constants';
 import { Card } from 'react-native-paper';
 
 import styles from "./DatosStyle";
+LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
 
 function DatosSolicitante(props) {
+ 
+
   console.log(props);
   const [date, setDate] = useState(new Date());
   const [mode, setMode] = useState('date');

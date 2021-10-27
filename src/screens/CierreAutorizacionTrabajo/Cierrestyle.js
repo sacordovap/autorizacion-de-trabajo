@@ -99,7 +99,7 @@ export default StyleSheet.create({
         width: 32
       },
       textInputStack: {
-        width: 270,
+        flex:1, flexDirection: "row", 
         marginTop: 11,
         marginLeft: 10
       },

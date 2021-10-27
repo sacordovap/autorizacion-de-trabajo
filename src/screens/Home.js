@@ -1,64 +1,99 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Image, ImageBackground, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Image, ImageBackground, TouchableOpacity, Text } from "react-native";
 
 function Home(props) {
-    return (
-        <View style={styles.container}>
-            <ImageBackground
-                source={require("../../assets/images/fondo.jpg")}
-                resizeMode="stretch"
-                style={styles.image}
-                imageStyle={styles.image_imageStyle}
-            >
-                <Image
-                    source={require("../../assets/images/documento.png")}
-                    resizeMode="contain"
-                    style={styles.documento}
-                ></Image>
-                <TouchableOpacity
-                    onPress={() =>
-                        props.navigation.navigate('Formulario')
-                    }><View style={styles.rect}>
-                        <Text style={styles.nuevaAutorizacion}>NUEVA AUTORIZACION</Text>
-                    </View></TouchableOpacity>
-            </ImageBackground>
-        </View>
-    );
+
+  console.log(props)
+  return (
+    <View style={styles.container}>
+      <View style={styles.backgroundStack}>
+        <ImageBackground
+          source={require("../../assets/images/T2MDYDINPBHWNGA76MRDJARKGA.jpg")}
+          resizeMode="cover"
+          style={styles.background}
+          imageStyle={styles.background_imageStyle}
+        >
+          <TouchableOpacity style={[styles.containerDocumentosRecientes, props.style, styles.cupertinoButtonInfo]}
+          onPress={() =>
+            props.navigation.navigate('Formulario')}
+          >
+            <Text style={styles.nuevoReporte}>NUEVA AUTORIZACION</Text>
+          </TouchableOpacity>
+
+        </ImageBackground>              
+       
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    image: {
-        width: "100%",
-        height: "100%",
-        marginTop: 23
-    },
-    image_imageStyle: {},
-    documento: {
-        width: 200,
-        height: 200,
-        marginTop: 164,
-        marginLeft: 80
-    },
-    rect: {
-        width: 251,
-        height: 55,
-        backgroundColor: "rgba(48,145,175,0.96)",
-        borderWidth: 1,
-        borderColor: "rgba(250,248,248,0.96)",
-        borderRadius: 39,
-        marginTop: 39,
-        marginLeft: 54
-    },
-    nuevaAutorizacion: {
-        color: "rgba(255,255,255,1)",
-        textAlign: "center",
-        fontSize: 16,
-        opacity: 0.82,
-        marginTop: 16,
-    }
+  container: {
+    flex: 1
+  },
+  containerDocumentosRecientes: {
+    backgroundColor: "rgba(239,173,51,1)",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    borderRadius: 5,
+    opacity:80,
+    paddingLeft: 16,
+    paddingRight: 16
+  },
+  buscarDocumentos: {
+    color: "#fff",
+    fontSize: 14
+  },
+  containerSpeech: {
+    backgroundColor: "rgba(1,123,146,1)",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    borderRadius: 5,
+    paddingLeft: 16,
+    paddingRight: 16
+  },
+  nuevoReporte: {
+    color: "#fff",
+    fontSize: 14
+  },
+  background: {
+    top: 0,
+    left: 0,
+    width: 360,
+    position: "absolute",
+    backgroundColor: "rgba(15,15, 15,0.10079999999999999)",
+    bottom: 0
+  },
+  background_imageStyle: {
+    opacity: 0.84
+  },
+  cupertinoButtonInfo: {
+    height: 33,
+    width: 207,
+    marginTop: 449,
+    marginLeft: 77
+  },
+  logo: {
+    top: 16,
+    width: 310,
+    height: 270,
+    position: "absolute",
+    left: 20,
+
+  },
+  documentos_Recientes: {
+    height: 32,
+    width: 205,
+    position: "absolute",
+    top: 508,
+    left: 78
+  },
+  backgroundStack: {
+    width: 360,
+    flex: 1
+  }
 });
 
 export default Home;
