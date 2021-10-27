@@ -1,7 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
- import DatosSolicitante from "./src/screens/DatosSolicitante/DatosSolicitante";
+import DatosSolicitante from "./src/screens/DatosSolicitante/DatosSolicitante";
+import AprobacionArea from "./src/screens/AprobacionArea/AprobacionArea";
+import ExtensionPermisoTrabajo from "./src/screens/ExtensionPermisoTrabajo/ExtensionPermisoTrabajo";
+import CierreAutorizacionTrabajo from "./src/screens/CierreAutorizacionTrabajo/CierreAutorizacionTrabajo";
+
+
 
  import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -16,8 +21,19 @@ function MyStack() {
     <Stack.Navigator screenOptions={{
       headerShown: false
     }}>
+       <Stack.Screen name="Cierre Trabajo"
+        component={CierreAutorizacionTrabajo} />
+      <Stack.Screen name="ExtensionPermisoTrabajo"
+        component={ExtensionPermisoTrabajo} />
+      <Stack.Screen name="Aprobacion Area"
+        component={AprobacionArea} />
       <Stack.Screen name="Datos-Solicitante"
         component={DatosSolicitante} />
+        
+       
+      
+
+
 
     </Stack.Navigator>
   )
